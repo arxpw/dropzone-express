@@ -1,0 +1,9 @@
+html
+  head
+    link(rel='stylesheet', href='/dist/css/production.css', type='text/css')
+    script(src='/dist/js/production.js')
+    if locals.title
+      title= title
+    else
+      title= 'undefined title'
+  body
