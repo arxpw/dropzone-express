@@ -4,7 +4,7 @@ $(function() {
       url: "/upload",
       resizeQuality: 0.08,
       maxThumbnailFilesize: 30,
-      parallelUploads: 2,
+      parallelUploads: 6,
       init: function() {
         this.on('addedfile', function(file) {
           // console.log('file added');
