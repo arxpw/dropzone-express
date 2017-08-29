@@ -12,10 +12,10 @@ Open in your browser..
 http://localhost:5000
 ```
 
-## Default application options
-By default, images and thumbnails currently go into /uploads
-By default, production JavaScript & CSS are placed into /public/dist/js & /public/dist/css
-By default, the application port is 5000
+## #Default application options
+* [Uploads] By default, images and thumbnails currently go into /uploads
+* [Javascript & CSS] By default, production JavaScript & CSS are placed into /public/dist/js & /public/dist/css
+* [Access] By default, the application port is 5000, intended to be used with a reverse proxy with NGINX or APACHE
 
 ### Requirements
 This application requires ImageMagick to be installed on a ( hopefully linux )-based system for thumbnail generation.
