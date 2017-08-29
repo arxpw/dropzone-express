@@ -8662,7 +8662,8 @@ html, body {
   margin-bottom: -300px;
 }
 
-footer, .push {
+footer,
+.push {
   height: 300px;
 }
 
