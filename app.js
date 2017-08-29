@@ -90,6 +90,10 @@ app.post('/upload', function(req, res) {
   })
 })
 
+app.get('/uploads/*', function(req,res) {
+  res.sendfile('public/dist/404.jpg')
+})
+
 const port = 5000
 app.listen(port, function () {
   console.log('Upload application listening on port ' + port)
