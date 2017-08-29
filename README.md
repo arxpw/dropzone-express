@@ -1,8 +1,8 @@
 # dropzone-express
 An example test application using dropzone with nodejs.
 
-# Installation & runtime requirements
-This application requires ImageMagick to be installed on a ( hopefully linux )-based system
+# Runtime requirements
+This application requires ImageMagick to be installed on a ( hopefully linux )-based system for thumbnail generation.
 ```
 apt-get install imagemagick -y
 ```
