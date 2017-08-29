@@ -13,18 +13,14 @@ app.use('/' + uploadFolder, express.static(uploadFolder))
 app.use(upload())
 app.set('view engine', 'pug')
 
-app.get('/', function (req, res) {
-  uploadFiles = []
-  fs.readdirSync('./' + uploadFolder + '/').forEach(file => {
-    if(file.includes('thumb')) {
-      uploadFiles.push(file)
-    }
-  })
+var getUploadedFiles = require('./modules/getUploadedFiles.js')
 
+app.get('/', function (req, res) {
+  // queries all files within
   res.render('pages/home', { 
     title: 'Uploader', 
     message: 'Click and drag files into this box!', 
-    uploads: uploadFiles, 
+    uploads: getUploadedFiles(uploadFolder), 
     uploadDirectory: '/' + uploadFolder 
   })
 })
@@ -87,20 +83,9 @@ app.post('/upload', function(req, res) {
     var thumbnailFinalPath   = uploadFolder + '/' + fileNameString.substring(0,fileNameString.indexOf('.')) + '_thumb' + fileNameString.substring(fileNameString.indexOf('.'), fileNameString.length)
     var thumbnailWriteStream = fs.createWriteStream(thumbnailFinalPath)
     
-    im(uploadFolder + '/' + fileNameString).resize('265x190').quality(36).pipe(thumbnailWriteStream)
-    /*
-    thumbnailWriteStream.on('error', function(err) {
-      console.log('error!!')
-      var inStream = fs.createReadStream('public/dist/404.jpg')
-      var outStream = fs.createWriteStream(thumbnailFinalPath)
-
-      inStream.pipe(outStream)
-      return res.status(200).send(fileNameString) 
-    })
-    */
-
-    //im(uploadFolder + '/' + fileNameString).thumbnail('320x320').quality(32).to(uploadFolder + '/' + fileNameString.substring(0,fileNameString.indexOf('.')) + '_thumb' + fileNameString.substring(fileNameString.indexOf('.'), fileNameString.length))
-      return res.status(200).send(fileNameString)
+    // low quality for now
+    im(uploadFolder + '/' + fileNameString).resize('265x200').quality(12).pipe(thumbnailWriteStream)
+    return res.status(200).send(fileNameString)
   })
 })
 
