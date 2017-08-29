@@ -1,5 +1,12 @@
 @import 'variables';
 @import 'animations/shake-hard';
 @import 'libs/dropzone';
-@import 'bootstrap';
-@import 'index';
+@import 'libs/bootstrap';
+
+@import 'components/header';
+@import 'components/footer';
+
+@import 'components/buttons/delet-button';
+@import 'components/buttons/link-button';
+
+@import 'pages/home/thumb-item';

@@ -246,8 +246,8 @@
   box-sizing: border-box; 
 }
 .dropzone {
-  border: 4px dashed #749ef7;
-  color: #5884e0;
+  border: 4px dashed $darker-brand;
+  color: $default-brand;
   background: white;
   font-size: 25px;
   padding: 32px 25px;

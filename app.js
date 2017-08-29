@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
     }
   })
 
-  res.render('index', { 
+  res.render('pages/home', { 
     title: 'Uploader', 
     message: 'Click and drag files into this box!', 
     uploads: uploadFiles, 

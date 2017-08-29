@@ -1,4 +1,5 @@
 .thumb-item {
+  background-color:#eee;
   background-position:center;
   background-repeat:no-repeat;
   transition: all 200ms ease;
@@ -7,35 +8,12 @@
   height:195px;
   position:relative;
   width:25%;
-  a.delet,a.link {
-    position: absolute;
-    content: " ";
-    width: 50px;
-    height: 50px;
-    left: 5px;
-    top: 5px;
-    background-size: 100%;
-    background-repeat:no-repeat;
-    background-image: url('/dist/delet.JPG');
-    color:#fff;
-    font-size:10px;
-    text-align:center;
-    display:none;
-  }
-  a.link {
-    background-color: #2d5ec5;
-    background-image: none;
-    padding-top: 12px;
-    top: 60px;
-    line-height: 12px;
-    vertical-align: middle;
-  }
   &:hover {
     background-size: 80%;
     a {
       display:block;
     }
-    a.delet {
+    a.delet-button {
       &:hover {
         filter: saturate(6);
         animation-name: shake-hard;

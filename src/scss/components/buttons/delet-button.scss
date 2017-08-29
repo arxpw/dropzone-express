@@ -1,0 +1,15 @@
+.delet-button {
+    position: absolute;
+    content: " ";
+    width: 50px;
+    height: 50px;
+    left: 5px;
+    top: 5px;
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-image: url('/dist/delet.JPG');
+    color:#fff;
+    font-size:10px;
+    text-align:center;
+    display:none;
+}

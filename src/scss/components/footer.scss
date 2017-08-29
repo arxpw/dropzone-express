@@ -1,0 +1,19 @@
+footer {
+  background: $default-brand;
+  * {
+    color:#eee;
+  }
+}
+// sticky footer bit
+html,body {
+  height:100%;
+  margin:0;
+}
+.wrapper {
+  min-height:100%;
+  margin-bottom:-300px;
+}
+footer,
+.push {
+  height:300px;
+}

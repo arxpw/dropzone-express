@@ -1,0 +1,10 @@
+div(class='item-list')
+  if locals.uploads
+    - for (var i = 0; i < uploads.length; ++i) {
+      - var nothumb = (locals.uploadDirectory + '/' + uploads[i]).replace('_thumb','')
+        div.thumb-item(style='background-image:url(' + locals.uploadDirectory + '/' + uploads[i] + ');')
+          a(href=nothumb, target='_blank')
+            a.delet-button(href="/delete/" + uploads[i])
+            a.link-button(href=nothumb, target='_blank') view source
+            a.tag(href='/tag')
+    - }
