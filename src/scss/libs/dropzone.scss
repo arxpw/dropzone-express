@@ -251,6 +251,11 @@
   background: white;
   font-size: 25px;
   padding: 32px 25px;
+  @media screen and (max-width:561px) {
+    border: 2px dashed $darker-brand;
+    padding: 10px;
+    font-size:15px;
+  }
 }
 .dropzone.dz-clickable .dz-message, 
 .dropzone.dz-clickable .dz-message *,

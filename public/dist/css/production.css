@@ -423,6 +423,14 @@
   padding: 32px 25px;
 }
 
+@media screen and (max-width: 561px) {
+  .dropzone {
+    border: 2px dashed #5884e0;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
 .dropzone.dz-clickable .dz-message,
 .dropzone.dz-clickable .dz-message *,
 .dropzone.dz-clickable {

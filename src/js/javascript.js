@@ -14,6 +14,12 @@ $(function() {
             var previewElem = $(success.previewElement);
             previewElem.find('.dz-filename').wrap('<a target="_blank" href="/uploads/' + success.xhr.response + '"></a>');
           }
+        }),
+        this.on('queuecomplete', function(complete) {
+          window.setTimeout(function() {
+            console.log('queue complete... let\'s refresh!');
+            location.reload();
+          }, 1200);
         })
       }
     }

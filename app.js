@@ -84,7 +84,22 @@ app.post('/upload', function(req, res) {
     if (err)
       return res.status(500).send(err)
 
-    im(uploadFolder + '/' + fileNameString).thumbnail('320x320').quality(32).to(uploadFolder + '/' + fileNameString.substring(0,fileNameString.indexOf('.')) + '_thumb' + fileNameString.substring(fileNameString.indexOf('.'), fileNameString.length))
+    var thumbnailFinalPath   = uploadFolder + '/' + fileNameString.substring(0,fileNameString.indexOf('.')) + '_thumb' + fileNameString.substring(fileNameString.indexOf('.'), fileNameString.length)
+    var thumbnailWriteStream = fs.createWriteStream(thumbnailFinalPath)
+    
+    im(uploadFolder + '/' + fileNameString).resize('265x190').quality(36).pipe(thumbnailWriteStream)
+    /*
+    thumbnailWriteStream.on('error', function(err) {
+      console.log('error!!')
+      var inStream = fs.createReadStream('public/dist/404.jpg')
+      var outStream = fs.createWriteStream(thumbnailFinalPath)
+
+      inStream.pipe(outStream)
+      return res.status(200).send(fileNameString) 
+    })
+    */
+
+    //im(uploadFolder + '/' + fileNameString).thumbnail('320x320').quality(32).to(uploadFolder + '/' + fileNameString.substring(0,fileNameString.indexOf('.')) + '_thumb' + fileNameString.substring(fileNameString.indexOf('.'), fileNameString.length))
       return res.status(200).send(fileNameString)
   })
 })
