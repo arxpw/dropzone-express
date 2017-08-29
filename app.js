@@ -1,16 +1,17 @@
 const express = require('express')
-const thumb   = require('node-thumbnail').thumb;
 const app     = express()
-const upload  = require('express-fileupload')
-const im      = require('imagemagick-stream')
-const fs      = require('fs')
 
-const uploadFolder = 'uploads';
+const fs      = require('fs')
+const im      = require('imagemagick-stream')
+const thumb   = require('node-thumbnail').thumb
+const upload  = require('express-fileupload')
+
+const uploadFolder = 'uploads'
 
 app.use(express.static('public'))
 app.use('/' + uploadFolder, express.static(uploadFolder))
 
-app.use(upload());
+app.use(upload())
 app.set('view engine', 'pug')
 
 app.get('/', function (req, res) {
@@ -20,6 +21,7 @@ app.get('/', function (req, res) {
       uploadFiles.push(file)
     }
   })
+
   res.render('index', { 
     title: 'Uploader', 
     message: 'Click and drag files into this box!', 
@@ -83,9 +85,8 @@ app.post('/upload', function(req, res) {
     if (err)
       return res.status(500).send(err)
 
-    im(uploadFolder + '/' + fileNameString).thumbnail('320x320').quality(32).to(uploadFolder + '/' + fileNameString.substring(0,fileNameString.indexOf('.')) + '_thumb' + fileNameString.substring(fileNameString.indexOf('.'), fileNameString.length));
+    im(uploadFolder + '/' + fileNameString).thumbnail('320x320').quality(32).to(uploadFolder + '/' + fileNameString.substring(0,fileNameString.indexOf('.')) + '_thumb' + fileNameString.substring(fileNameString.indexOf('.'), fileNameString.length))
       return res.status(200).send(fileNameString)
-    
   })
 })
 
