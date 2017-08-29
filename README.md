@@ -1,5 +1,11 @@
 # dropzone-express
-Dropzone project, made in express ( wip )
+An example test application using dropzone with nodejs.
+
+# Installation & runtime requirements
+This application requires ImageMagick to be installed on a ( hopefully linux )-based system
+```
+apt-get install imagemagick -y
+```
 
 # Installation
 ```
