@@ -20,7 +20,6 @@
     "gulp-uglify": "^3.0.0",
     "gulp-uncss": "^1.0.6",
     "imagemagick-stream": "^4.1.1",
-    "node-thumbnail": "^0.12.0",
     "pug": "^2.0.0-rc.3"
   }
 }

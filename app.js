@@ -3,7 +3,6 @@ const app     = express()
 
 const fs      = require('fs')
 const im      = require('imagemagick-stream')
-const thumb   = require('node-thumbnail').thumb
 const upload  = require('express-fileupload')
 
 const uploadFolder = 'uploads'
