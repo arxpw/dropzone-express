@@ -2,7 +2,7 @@ div(class='item-list')
   if locals.uploads
     - for (var i = 0; i < uploads.length; ++i) {
       - var nothumb = (locals.uploadDirectory + '/' + uploads[i]).replace('_thumb','')
-        div.thumb-item(style='background-image:url(' + locals.uploadDirectory + '/' + uploads[i] + ');')
+        div.thumb-item.b-lazy(data-src=locals.uploadDirectory + '/' + uploads[i])
           a(href=nothumb, target='_blank')
             a.delet-button(href="/delete/" + uploads[i]) delete<br>this
             a.link-button(href=nothumb, target='_blank') view<br>source

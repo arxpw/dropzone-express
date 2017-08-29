@@ -18,6 +18,7 @@ gulp.task('css-minify', function() {
 gulp.task('js-minify', function(){
   return gulp.src(
     [
+      './src/js/libs/blazy.min.js',
       './src/js/libs/jquery.js',
       './src/js/libs/dropzone.js',
       './src/js/javascript.js'

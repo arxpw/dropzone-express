@@ -33,6 +33,7 @@ apt-get install imagemagick -y
 ### This application has been built with the following:
 
 * [Dropzone](http://www.dropzonejs.com/) - Javascript framework for managing file uploads
+* [bLazy](http://dinbror.dk/blog/blazy/) - Javascript lazy loading
 * [Express-FileUpload](https://github.com/richardgirges/express-fileupload) - Upload middleware for managing multiple files and more
 * [Express](https://expressjs.com/) - Framework
 * [Pug](https://pugjs.org) - NodeJS Template engine

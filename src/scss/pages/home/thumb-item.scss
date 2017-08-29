@@ -1,5 +1,6 @@
 .thumb-item {
   background-color:#eee;
+  background-image:url(data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==);
   background-position:center;
   background-repeat:no-repeat;
   transition: all 200ms ease;
@@ -9,6 +10,7 @@
   height:150px;
   position:relative;
   width:25%;
+  cursor:pointer;
 }
 @media screen and (max-width:790px) {
   .thumb-item {

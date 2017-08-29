@@ -1,5 +1,6 @@
 Dropzone.autoDiscover = false;
 $(function() {
+  var bLazy = new Blazy();
   $("form#dropzone").dropzone({
     url: "/upload",
     resizeQuality: 0.08,
@@ -23,6 +24,8 @@ $(function() {
       })
     }
   });
+
+
   $('.delet-button').on('click', function(cl) {
     cl.preventDefault();
     // console.log('delete button clicked');
@@ -36,4 +39,13 @@ $(function() {
       }
     });
   });
+
+  $('.thumb-item').on('click', function(e) {
+    if(e.target != this) return;
+    $('.modal .image').css('background-image', 'url(' + $(this).find('.link-button').attr('href') + ')').parent().removeClass('hidden');
+  });
+
+  $('.modal .close').on('click', function() {
+    $(this).parents('.modal').addClass('hidden');
+  })
 })
