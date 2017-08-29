@@ -2104,7 +2104,7 @@ $(function() {
     $('.modal .image').css('background-image', 'url(' + $(this).find('.link-button').attr('href') + ')').parent().removeClass('hidden');
   });
 
-  $('.modal .close').on('click', function() {
-    $(this).parents('.modal').addClass('hidden');
+  $('.modal').on('click', function() {
+    $(this).addClass('hidden');
   })
 })
