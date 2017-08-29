@@ -1,17 +1,16 @@
 .link-button {
-    background-color: #2d5ec5;
+    background-color: rgba(45, 94, 197, 0.66);
     color:#fff;
     content: " ";
-    display:none;
     font-size:10px;
     height: 50px;
-    left: 5px;
+    left: 0;
     line-height: 12px;
     padding-top: 12px;
     position: absolute;
     text-align:center;
-    top: 5px;
-    top: 60px;
+    text-decoration: none;
+    top: 50px;
     vertical-align: middle;
     width: 50px;
 }

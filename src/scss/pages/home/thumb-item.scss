@@ -3,26 +3,12 @@
   background-position:center;
   background-repeat:no-repeat;
   transition: all 200ms ease;
-  background-size:100%;
+  background-size:cover;
   float:left;
-  height:195px;
+  opacity: 1;
+  height:150px;
   position:relative;
   width:25%;
-  &:hover {
-    background-size: 80%;
-    a {
-      display:block;
-    }
-    a.delet-button {
-      &:hover {
-        filter: saturate(6);
-        animation-name: shake-hard;
-        animation-duration: 100ms;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-      }
-    } 
-  }
 }
 @media screen and (max-width:790px) {
   .thumb-item {

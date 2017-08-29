@@ -4,8 +4,10 @@ include ../includes/head
       h1= title
     else
       h1 undefined message
-
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi soluta voluptas tempore temporibus, neque quibusdam recusandae sed porro cumque, et excepturi necessitatibus, aliquid autem, repellendus eveniet quasi obcaecati dolorem esse!
+    if locals.content
+      p= content
+    else 
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi soluta voluptas tempore temporibus, neque quibusdam recusandae sed porro cumque, et excepturi necessitatibus, aliquid autem, repellendus eveniet quasi obcaecati dolorem esse!
     //- Dropzone uploader component
     include ../components/dropzone
     //- The list of thumbnail items intended to be displayed on the home page

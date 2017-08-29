@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
   // queries all files within
   res.render('pages/home', { 
     title: 'Uploader', 
-    message: 'Click and drag files into this box!', 
+    content: 'Upload things here',
     uploads: getUploadedFiles(uploadFolder), 
     uploadDirectory: '/' + uploadFolder 
   })
@@ -32,12 +32,13 @@ app.get('/delete/:id', function(req, res) {
   var id = req.params.id
   fs.stat(uploadFolder + '/' + id, function(err, stat) {
    if(err == null) {
+      fs.unlinkSync(uploadFolder + '/' + id.replace('_thumb',''))
       fs.unlinkSync(uploadFolder + '/' + id)
-      return res.redirect('back')
+      return res.send(true)
     } else if(err.code == 'ENOENT') {
       return res.send('No image found by that ID')
     }
-    return res.send('Image deletion error')
+    return res.send('error')
   })
 })
 
@@ -84,7 +85,7 @@ app.post('/upload', function(req, res) {
     var thumbnailWriteStream = fs.createWriteStream(thumbnailFinalPath)
     
     // low quality for now
-    im(uploadFolder + '/' + fileNameString).resize('265x200').quality(12).pipe(thumbnailWriteStream)
+    im(uploadFolder + '/' + fileNameString).resize('362').quality(84).pipe(thumbnailWriteStream)
     return res.status(200).send(fileNameString)
   })
 })

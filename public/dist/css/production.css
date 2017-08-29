@@ -1727,6 +1727,7 @@ header {
 }
 
 footer {
+  margin-top: 50px;
   background: #749ef7;
 }
 
@@ -1750,35 +1751,51 @@ footer,
 }
 
 .delet-button {
-  position: absolute;
-  content: " ";
-  width: 50px;
-  height: 50px;
-  left: 5px;
-  top: 5px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-image: url("/dist/delet.JPG");
+  background: rgba(230, 14, 14, 0.6);
   color: #fff;
+  content: " ";
   font-size: 10px;
+  height: 50px;
+  left: 0;
+  line-height: 12px;
+  padding-top: 12px;
+  position: absolute;
+  text-decoration: none;
   text-align: center;
-  display: none;
+  top: 0;
+  width: 50px;
 }
 
 .link-button {
-  background-color: #2d5ec5;
+  background-color: rgba(45, 94, 197, 0.66);
   color: #fff;
   content: " ";
-  display: none;
   font-size: 10px;
   height: 50px;
-  left: 5px;
+  left: 0;
   line-height: 12px;
   padding-top: 12px;
   position: absolute;
   text-align: center;
-  top: 5px;
-  top: 60px;
+  text-decoration: none;
+  top: 50px;
+  vertical-align: middle;
+  width: 50px;
+}
+
+.tag-button {
+  background-color: rgba(21, 162, 148, 0.82);
+  color: #fff;
+  content: " ";
+  font-size: 10px;
+  height: 50px;
+  left: 0;
+  line-height: 12px;
+  padding-top: 12px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  bottom: 0px;
   vertical-align: middle;
   width: 50px;
 }
@@ -1788,27 +1805,12 @@ footer,
   background-position: center;
   background-repeat: no-repeat;
   transition: all 200ms ease;
-  background-size: 100%;
+  background-size: cover;
   float: left;
-  height: 195px;
+  opacity: 1;
+  height: 150px;
   position: relative;
   width: 25%;
-}
-
-.thumb-item:hover {
-  background-size: 80%;
-}
-
-.thumb-item:hover a {
-  display: block;
-}
-
-.thumb-item:hover a.delet-button:hover {
-  filter: saturate(6);
-  animation-name: shake-hard;
-  animation-duration: 100ms;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
 }
 
 @media screen and (max-width: 790px) {
