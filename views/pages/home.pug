@@ -1,15 +1,41 @@
 include ../includes/head
-  div.container
-    if locals.title
-      h1= title
-    else
-      h1 undefined message
-    if locals.content
-      p= content
-    else 
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi soluta voluptas tempore temporibus, neque quibusdam recusandae sed porro cumque, et excepturi necessitatibus, aliquid autem, repellendus eveniet quasi obcaecati dolorem esse!
-    //- Dropzone uploader component
-    include ../components/dropzone
+  .container.content-bg.padding-top-bottom
+    .row
+      .col-md-7
+        .filterbox
+          p FILTER
+          include ../components/inputs/input-switch
+          +switch('Hide NSFW Memes', 'filter-button-nsfw', 'checked')
+          +switch('Hide Political Memes', 'filter-button-political')
+      .col-md-5
+        .row
+          .col-md-5
+            .sortbox
+              p SORT
+              .select-container
+                select
+                  option(value='date') By Date
+                  option(value='rating') By Rating
+                  option(value='type') By Type
+          .col-md-7
+            .sortbox
+              p ITEMS PER PAGE
+              .select-container
+                select
+                  option(value='12') 12 Items Per Page
+                  option(value='24') 24 Items Per Page
+                  option(value='48') 48 Items Per Page
+    br
+    hr
+    - var n = 0;
+    while n < 4
+      - n++;
+      - var columns = 0;
+      .row
+        while columns < 4
+          - columns++;
+          .col-md-3
+            img.padding-bottom-17.img-responsive(src='http://via.placeholder.com/350x200')
     //- The list of thumbnail items intended to be displayed on the home page
     include ../components/thumbnail-list
     

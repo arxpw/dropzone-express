@@ -1,0 +1,7 @@
+mixin switch(label, inputname, checked)
+  .switch-container
+    .switch-text
+      strong= label
+    .switch-click
+      input.switch(type='checkbox' checked=checked id=inputname name=inputname)
+      label(for=inputname)

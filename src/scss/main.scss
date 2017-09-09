@@ -3,12 +3,17 @@
 @import 'libs/dropzone';
 @import 'libs/bootstrap';
 
+@import 'components/typography';
 @import 'components/header';
+@import 'components/navigation';
 @import 'components/footer';
 
+@import 'components/input/input-select';
+@import 'components/input/checkbox-switch';
 @import 'components/buttons/delet-button';
 @import 'components/buttons/link-button';
 @import 'components/buttons/tag-button';
+
 @import 'components/image-modal';
 
 @import 'pages/home/thumb-item';

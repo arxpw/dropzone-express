@@ -1,3 +1,18 @@
 // DEFAULT BRAND COLOURS
-$default-brand: #749ef7;
-$darker-brand: #5884e0;
+
+// back
+$primary-brand: #0a5f59;
+// ui/ux
+$light-brand: #12ada2;
+// back highlights
+$darker-brand: #0a5f59;
+
+$background-color: #fcfcfc;
+$background-primary: #fff;
+
+body,html {
+  background: $background-color;
+  .content-bg {
+    background: $background-primary;
+  }
+}

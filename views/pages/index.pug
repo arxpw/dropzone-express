@@ -1,0 +1,12 @@
+include ../includes/head
+  div.container.content-bg
+    if locals.title
+      h1= title
+    else
+      h1 undefined message
+    if locals.content
+      p= content
+    else 
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi soluta voluptas tempore temporibus, neque quibusdam recusandae sed porro cumque, et excepturi necessitatibus, aliquid autem, repellendus eveniet quasi obcaecati dolorem esse!
+    
+  include ../includes/footer

@@ -1,13 +1,37 @@
 html
   head
     link(rel='stylesheet', href='/dist/css/production.css', type='text/css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Didact+Gothic')
     script(src='/dist/js/production.js')
     if locals.title
       title= title
     else
       title= 'undefined title'
   body
-    div(class='modal image-modal hidden')
-      div(class='image')
-    div(class='wrapper')
+    .header
+      .container
+        .row
+          .col-sm-6
+            .descriptor
+              if locals.title
+                h2= title
+              else
+                h2= 'undefined title'
+              p To upload something, you need to be <a href="/login">logged in</a>
+                <br>View featured, items, or view filtered out items
+          .col-sm-6
+            navigation
+              .pull-right
+                ul
+                  li.active 
+                    a(href='/') Home
+                  li 
+                    a(href='/about') About
+                  li 
+                    a(href='/featured') Featured
+                  li 
+                    a(href='/login') Login
+    .modal.image-modal.hidden
+      .image
+    .wrapper
       |

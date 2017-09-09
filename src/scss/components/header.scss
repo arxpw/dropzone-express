@@ -1,4 +1,23 @@
-header {
-  background:#666;
-  padding:30px 0;
+.header {
+  background:$primary-brand;
+  padding: 10px 0px 0px;
+  * {
+    color:#eee;
+  }
+  // LEFT
+  .descriptor {
+    h2 {
+      text-transform: uppercase;
+      font-weight:initial;
+      margin-bottom:5px;
+    }
+    p {
+      font-size:13px;
+      margin-top:4px;
+    }
+    a {
+      font-weight:900;
+      text-decoration: none;
+    }
+  }
 }

@@ -247,12 +247,12 @@
 }
 .dropzone {
   border: 4px dashed $darker-brand;
-  color: $default-brand;
+  color: $darker-brand;
   background: white;
   font-size: 25px;
   padding: 32px 25px;
   @media screen and (max-width:561px) {
-    border: 2px dashed $darker-brand;
+    border: 2px dashed $primary-brand;
     padding: 10px;
     font-size:15px;
   }

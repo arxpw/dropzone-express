@@ -6,6 +6,8 @@ const im      = require('imagemagick-stream')
 const upload  = require('express-fileupload')
 
 const uploadFolder = 'uploads'
+const port         = 80
+
 
 app.use(express.static('public'))
 app.use('/' + uploadFolder, express.static(uploadFolder))
@@ -18,7 +20,7 @@ var getUploadedFiles = require('./modules/getUploadedFiles.js')
 app.get('/', function (req, res) {
   // queries all files within
   res.render('pages/home', { 
-    title: 'Uploader', 
+    title: 'ThatMemeSite', 
     content: 'Upload things here',
     uploads: getUploadedFiles(uploadFolder), 
     uploadDirectory: '/' + uploadFolder 
@@ -94,7 +96,6 @@ app.get('/uploads/*', function(req,res) {
   res.sendfile('public/dist/404.jpg')
 })
 
-const port = 5000
 app.listen(port, function () {
   console.log('Upload application listening on port ' + port)
 })

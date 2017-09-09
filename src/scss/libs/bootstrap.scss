@@ -10,6 +10,17 @@ body,html {
 .visible-lg {
   display: none !important;
 }
+.img-responsive {
+  max-width:100%;
+  height:auto;
+}
+.padding-top-bottom {
+  padding-top: 25px;
+  padding-bottom:25px;
+}
+.padding-bottom-17 {
+  padding-bottom:17px;
+}
 .visible-xs-block,
 .visible-xs-inline,
 .visible-xs-inline-block,
