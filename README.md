@@ -35,6 +35,7 @@ apt-get install imagemagick -y
 * [Dropzone](http://www.dropzonejs.com/) - Javascript framework for managing file uploads
 * [bLazy](http://dinbror.dk/blog/blazy/) - Javascript lazy loading
 * [Express-FileUpload](https://github.com/richardgirges/express-fileupload) - Upload middleware for managing multiple files and more
+* [IOS CSS Checkbox](http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/) - ( copy and paste + modifications)
 * [Express](https://expressjs.com/) - Framework
 * [Pug](https://pugjs.org) - NodeJS Template engine
 * [SASS/SCSS](http://sass-lang.com/) - Better management of CSS, functions, variables etc
